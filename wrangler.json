@@ -1,0 +1,21 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "openshot-hono-worker",
+	"main": "./src/worker/index.tsx",
+	"compatibility_date": "2025-10-08",
+	"compatibility_flags": ["nodejs_compat"],
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true,
+	"r2_buckets": [
+		{
+			"binding": "BUCKET","bucket_name": "openshot-hono-worker","preview_bucket_name": "openshot-hono-worker"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB","database_id": "f30c9655-88ad-405d-a2f6-74c584bcf3c8","database_name": "openshot-hono-worker"
+		}
+	]
+}
